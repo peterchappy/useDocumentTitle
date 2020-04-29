@@ -1,21 +1,40 @@
 {
-  "name": "use-document-title",
+  "name": "@chappy/use-document-title",
   "version": "1.0.0",
   "description": "a react hook for setting up a document title",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "mocha -r ts-node/register ./**.spec.ts",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json",
-    "build": "tsc"
-  },
   "keywords": [
     "react",
     "hook",
     "typescript"
   ],
-  "author": "Peter Chapman",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Peter Chapman <peter@chapman.codes>",
   "license": "MIT",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterchappy/useDocumentTitle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peterchappy/useDocumentTitle/issues"
+  },
+  "homepage": "https://github.com/peterchappy/useDocumentTitle",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "postversion": "git push && git push --tags",
+    "test": "mocha -r ts-node/register ./src/**.spec.ts",
+    "version": "npm run format && git add -A src"
+  },
   "dependencies": {
     "react": "^16.13.1",
     "typescript": "^3.8.3"
@@ -32,13 +51,5 @@
     "ts-node": "^8.9.1",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:peterchappy/useDocumentTitle.git"
-  },
-  "bugs": {
-    "url": "https://github.com/peterchappy/useDocumentTitle/issues"
-  },
-  "homepage": "https://github.com/peterchappy/useDocumentTitle"
+  }
 }
