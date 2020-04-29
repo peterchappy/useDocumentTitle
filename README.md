@@ -1,5 +1,7 @@
 # `@chappy/use-document-title`
 
+[![CircleCI](https://circleci.com/gh/peterchappy/useDocumentTitle.svg?style=svg)](https://circleci.com/gh/peterchappy/useDocumentTitle)
+
 React hook for setting the document title
 
 ## Install
@@ -17,7 +19,7 @@ import { useDocumentTitle } from "@chappy/use-document-title";
 const Foo = () => {
   useDocumentTitle({ title: "Page Title" });
   return <div />;
-}
+};
 ```
 
 ## Arguments
@@ -29,5 +31,5 @@ useDocumentTitle({
 })
 ```
 
-* `title: string` The title you want to set the document to. `useDocumentTitle` observers this as a dependency.
-* `revertOnUnmount: boolean` Will revert to previous title on unmount.
+- `title: string` The title you want to set the document to. `useDocumentTitle` observers this as a dependency.
+- `revertOnUnmount: boolean` Will revert to previous title on unmount.
