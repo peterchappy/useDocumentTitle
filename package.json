@@ -33,7 +33,7 @@
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "postversion": "git push && git push --tags",
-    "test": "mocha -r ts-node/register ./src/**.spec.ts",
+    "test": "mocha -r ts-node/register ./src/**.spec.tsx",
     "version": "npm run format && git add -A src"
   },
   "dependencies": {
