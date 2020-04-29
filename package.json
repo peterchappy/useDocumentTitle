@@ -1,6 +1,6 @@
 {
   "name": "@chappy/use-document-title",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a react hook for setting up a document title",
   "keywords": [
     "react",
@@ -12,7 +12,8 @@
   },
   "author": "Peter Chapman <peter@chapman.codes>",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/peterchappy/useDocumentTitle.git"
@@ -22,7 +23,7 @@
   },
   "homepage": "https://github.com/peterchappy/useDocumentTitle",
   "files": [
-    "dist/**/*"
+    "dist"
   ],
   "scripts": {
     "build": "tsc",
